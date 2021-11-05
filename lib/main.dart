@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (_, __, ___) {
       return MaterialApp(
         title: 'Work-Space UI',
-        theme: ThemeData(primaryColor: const Color(0xffFFAB00)),
+        theme: ThemeData(
+          scaffoldBackgroundColor: const Color(0xffE5E5E5),
+          primaryColor: const Color(0xffFFAB00),
+        ),
         home: const HomeScreen(),
       );
     });
