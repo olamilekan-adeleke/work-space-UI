@@ -19,33 +19,80 @@ class CategoriesWidget extends StatelessWidget {
           color: const Color(0xff323B4B),
         ),
         SizedBox(height: 10.sp),
-        SizedBox(
-          height: 46.sp,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            physics: const BouncingScrollPhysics(),
-            children: const <Widget>[
-              CategoriesItemWidget(
-                image: "asset/people.svg",
-                title: "co-space",
-              ),
-              CategoriesItemWidget(
-                image: "asset/locate.svg",
-                title: "Cafe",
-                color: Color(0xffFDF4E0),
-              ),
-              CategoriesItemWidget(
-                image: "asset/people.svg",
-                title: "Library",
-              ),
-              CategoriesItemWidget(
-                image: "asset/people.svg",
-                title: "Book Shop",
-              ),
-            ],
-          ),
-        ),
+        const CategoriesListWidget(),
       ],
+    );
+  }
+}
+
+class CategoriesListWidget extends StatefulWidget {
+  const CategoriesListWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<CategoriesListWidget> createState() => _CategoriesListWidgetState();
+}
+
+class _CategoriesListWidgetState extends State<CategoriesListWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController animationController;
+  late final Animation<Offset> animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    )..forward();
+
+    animation = Tween<Offset>(
+      begin: const Offset(1, 0.0),
+      end: const Offset(0.0, 0.0),
+    ).animate(CurvedAnimation(
+      parent: animationController,
+      curve: Curves.bounceInOut,
+    ));
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideTransition(
+      position: animation,
+      child: SizedBox(
+        height: 46.sp,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          children: const <Widget>[
+            CategoriesItemWidget(
+              image: "asset/people.svg",
+              title: "co-space",
+            ),
+            CategoriesItemWidget(
+              image: "asset/locate.svg",
+              title: "Cafe",
+              color: Color(0xffFDF4E0),
+            ),
+            CategoriesItemWidget(
+              image: "asset/people.svg",
+              title: "Library",
+            ),
+            CategoriesItemWidget(
+              image: "asset/people.svg",
+              title: "Book Shop",
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
