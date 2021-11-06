@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../widgets/categories_widget.dart';
 import '../widgets/home_header_widget.dart';
 import '../widgets/search_bar.dart';
 
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20.sp),
             const SearchBarWidget(),
             SizedBox(height: 30.sp),
+            const CategoriesWidget(),
           ],
         ),
       ),
