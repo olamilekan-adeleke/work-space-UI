@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:work_space_ui/views/widgets/nearby_space_widget.dart';
 
 import '../widgets/categories_widget.dart';
 import '../widgets/home_header_widget.dart';
@@ -21,6 +22,8 @@ class HomeScreen extends StatelessWidget {
             const SearchBarWidget(),
             SizedBox(height: 30.sp),
             const CategoriesWidget(),
+            SizedBox(height: 30.sp),
+            const NearBySpaceWidget(),
           ],
         ),
       ),
