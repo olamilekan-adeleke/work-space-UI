@@ -83,7 +83,7 @@ class _ItemListState extends State<ItemList>
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const SelectedItemScreen(),
+                  builder: (_) => SelectedItemScreen(space),
                 ),
               );
             },

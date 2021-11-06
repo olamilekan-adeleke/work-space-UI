@@ -24,7 +24,7 @@ final List<SpaceModel> nearBySpaceList = <SpaceModel>[
     location: 'Alaska, United states',
     pricePerHour: 15,
     description:
-        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech',
+        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech. Collaborative ecosystem  providing workspace, support & networking opportunities to tech Read more...',
   ),
   SpaceModel(
     name: 'Kod-x WorkSpace',
@@ -33,7 +33,7 @@ final List<SpaceModel> nearBySpaceList = <SpaceModel>[
     location: 'Alaska, United states',
     pricePerHour: 13,
     description:
-        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech',
+        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech. Collaborative ecosystem  providing workspace, support & networking opportunities to tech Read more...',
   ),
   SpaceModel(
     name: 'Plato WorkSpace',
@@ -42,7 +42,7 @@ final List<SpaceModel> nearBySpaceList = <SpaceModel>[
     location: 'Alaska, United states',
     pricePerHour: 12,
     description:
-        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech',
+        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech. Collaborative ecosystem  providing workspace, support & networking opportunities to tech Read more...',
   ),
   SpaceModel(
     name: 'Google WorkSpace',
@@ -51,6 +51,6 @@ final List<SpaceModel> nearBySpaceList = <SpaceModel>[
     location: 'Alaska, United states',
     pricePerHour: 25,
     description:
-        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech',
+        'Collaborative ecosystem  providing workspace, support & networking opportunities to tech. Collaborative ecosystem  providing workspace, support & networking opportunities to tech Read more...',
   ),
 ];
