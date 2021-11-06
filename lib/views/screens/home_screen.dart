@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:work_space_ui/views/widgets/botton_nav_bar_widget.dart';
 import 'package:work_space_ui/views/widgets/nearby_space_widget.dart';
 
 import '../widgets/categories_widget.dart';
@@ -27,6 +28,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const BottomNavBarWidget(),
     );
   }
 }
