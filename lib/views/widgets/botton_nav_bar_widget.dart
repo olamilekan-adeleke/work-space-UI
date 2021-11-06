@@ -10,6 +10,8 @@ class BottomNavBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      showUnselectedLabels: true,
+      unselectedItemColor: kcTextColor,
       selectedItemColor: Theme.of(context).primaryColor,
       currentIndex: 0,
       items: [
